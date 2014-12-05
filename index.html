@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- DEV -->
+		<script src="jquery-1.11.1.min.js"></script>
+		<script src="highcharts.js"></script>
+		<script src="highcharts-more.js"></script>
+		<!-- /DEV -->
+		<title>highcharts</title>
+
+		<script>
+        $(function () { 
+    		$('#container').highcharts({
+                data: {
+                    googleSpreadsheetKey: '1yw0ncYematu3jqjbSyp96rEFERH5o5w-1eWSH0g6qqY',
+                },
+                title: {
+                    text: 'Google Spreadsheet Data'
+                },
+    	    });
+	    });
+	</script>
+	</head>
+
+	<body>
+		<div id="container" style="width: 600px; height: 400px;"></div>
+
+	</body>
+
+</html>
