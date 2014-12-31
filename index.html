@@ -1,30 +1,54 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<!-- DEV -->
-		<script src="jquery-1.11.1.min.js"></script>
-		<script src="highcharts.js"></script>
-		<script src="highcharts-more.js"></script>
-		<!-- /DEV -->
-		<title>highcharts</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Infographics Final Project</title>
+  
+  <!-- Style declared here instead of separate file -->
+  <style>
+    h3 {
+      width: 700px; }
 
-		<script>
-        $(function () { 
-    		$('#container').highcharts({
-                data: {
-                    googleSpreadsheetKey: '1yw0ncYematu3jqjbSyp96rEFERH5o5w-1eWSH0g6qqY',
-                },
-                title: {
-                    text: 'Google Spreadsheet Data'
-                },
-    	    });
-	    });
-	</script>
-	</head>
+    body {
+      font: 10px sans-serif; }
 
-	<body>
-		<div id="container" style="width: 600px; height: 400px;"></div>
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges; }
 
-	</body>
+    .x.axis path {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges; }
 
+    .line {
+      fill: none;
+      stroke: red;
+      stroke-width: 1.5px; }
+
+    .overlay {
+      fill: none;
+      pointer-events: all; }
+
+    .focus circle {
+      fill: red;
+      stroke: red; }
+  </style>
+</head>
+
+<body>
+	<div class="container">
+		<h1>Colorado vs. Federal minimum wage</h1>
+    <h3>The Colorado minimum wage is set to increase this January while the Federal minimum wage hasn’t increased since 2009. Data pulled from the U.S. department of labor and the Colorado Department of Labor and Employment. This graph shows the minimum wage over time for Colorado.</h3>
+    <div id="chart"></div>
+	</div>
+
+  <!-- This loads the d3 library that I downloaded from the internets and placed in the same folder as this index.html-->
+  <script src="d3.min.js"></script>
+
+  <!-- Javascript declared in separate file in same folder as index.html--> 
+  <script text="Javascript" src="script.js"></script>
+</body>
 </html>
